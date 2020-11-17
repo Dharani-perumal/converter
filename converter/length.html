@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body><div style="border:2px solid silver;height: 800px;background-color:rgb(165, 128, 180);width: 700px;margin: auto;margin-top: 100px;">
+      <h1> LENGTH CONVERTER</h1>
+     <div id="mainContainer">
+    <div>
+    <label for="length"> LENGTH    &nbsp;:</label> &nbsp; &nbsp;
+    <input type="number" id="length" name="length"placeholder="Enter the length in killometer"> 
+    <div id="cm">CENTI METER</div>
+    <div id="mm">MILLI METER</div>
+    <div id="meter">METER</div>
+     
+    <div id="feet">FEET</div>
+    
+     
+     <div id="inch">INCH</div>
+     <button><a href="index.html">Back</a></button>
+     </div>
+    </div>
+     <script>
+         document.getElementById('length').addEventListener('input',function(e){
+             let input=e.target.value;
+             document.getElementById('cm').innerHTML="CENTI METER  :"+input*100000 +" cm";
+             document.getElementById('mm').innerHTML="MILLI METER :"+input*1000000+" mm";
+             document.getElementById('meter').innerHTML="METER  :"+input*1000+" m";
+             document.getElementById('feet').innerHTML="FEET  :"+input*3280.8+" ft";
+             document.getElementById('inch').innerHTML="INCH :"+input*39370.07874+" in";
+             
+             
+         })
+     </script>
+</body>
+</html>

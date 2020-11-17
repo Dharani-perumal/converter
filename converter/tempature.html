@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body><div style="border:2px solid silver;height: 800px;background-color:rgb(165, 128, 180);width: 700px;margin: auto;margin-top: 100px;">
+      <h1> TEMPERATURE CONVERTER</h1>
+     <div id="mainContainer">
+    <div>
+    <label for="temp"> TEMPERATURE    &nbsp;:</label> &nbsp; &nbsp;
+    <input type="number" id="temp" name="temp"placeholder="Enter the temp in celsius"> 
+    <div id="kelvin">KELVIN</div>
+    <div id="fahernment">FAHRENHEIT</div>
+    <button><a href="index.html">Back</a></button>
+     </div>
+    </div>
+     <script>
+         document.getElementById('temp').addEventListener('input',function(e){
+             let input=e.target.value;
+             document.getElementById('kelvin').innerHTML="KELVIN  :"+input+ 273.15 +" K";
+             document.getElementById('fahernment').innerHTML="FAHERNMENT :"+(input*1.8)+32+"F";
+             
+             
+             
+         })
+     </script>
+</body>
+</html>

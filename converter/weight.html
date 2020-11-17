@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body><div style="border:2px solid silver;height: 800px;background-color:rgb(165, 128, 180);width: 700px;margin: auto;margin-top: 100px;">
+      <h1> WEIGHT CONVERTER</h1>
+     <div id="mainContainer">
+    <div>
+    <label for="weight"> WEIGHT     &nbsp;:</label> &nbsp; &nbsp;
+    <input type="number" id="weight" name="weight"placeholder="Enter the weight in km"> 
+    <div id="mg">MILLIGRAM</div>
+    <div id="gm">GARM</div>
+    <div id="pound">POUND</div>
+     
+    <div id="tons">TONS</div>
+    
+     
+     <div id="ounces">OUNCES</div>
+     <button><a href="index.html">Back</a></button>
+     </div>
+   
+    </div>
+     <script>
+         document.getElementById('weight').addEventListener('input',function(e){
+             let input=e.target.value;
+             document.getElementById('pound').innerHTML="POUND  :"+input*2.2046+" lb";
+             document.getElementById('gm').innerHTML="GARM :"+input*1000+" gm";
+             document.getElementById('tons').innerHTML="TONS  :"+input/1000+" t";
+             document.getElementById('ounces').innerHTML="OUNCES  :"+input/0.02834952+" oz";
+             document.getElementById('mg').innerHTML="MILLIGRAM :"+input *1000000+" mg";
+             
+             
+         })
+     </script>
+</body>
+</html>

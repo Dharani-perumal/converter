@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body><div style="border:2px solid silver;height: 800px;background-color:rgb(165, 128, 180);width: 700px;margin: auto;margin-top: 100px;">
+      <h1> TIME CONVERTER</h1>
+     <div id="mainContainer">
+    <div>
+    <label for="weight"> TIME    &nbsp;:</label> &nbsp; &nbsp;
+    <input type="number" id="time" name="time"placeholder="Enter the time in hr"> 
+    <div id="milliseconds">MILLI SECONDS</div>
+    <div id="seconds">SECONDS</div>
+    <div id="minutes">MINUTES</div>
+     
+    <div id="days">DAYS</div>
+    
+    <button><a href="index.html">Back</a></button>
+     
+     </div>
+    </div>
+     <script>
+         document.getElementById('time').addEventListener('input',function(e){
+             let input=e.target.value;
+             document.getElementById('milliseconds').innerHTML="MILLI SECONDS  :"+(input*3600000 )+" ms";
+             document.getElementById('seconds').innerHTML="SECONDS :"+input* 3600+" s";
+             document.getElementById('minutes').innerHTML="MINUTES  :"+input*60+" m";
+             document.getElementById('days').innerHTML="DAYS  :"+input/24+" days";
+            
+             
+             
+         })
+     </script>
+</body>
+</html>
